@@ -1,0 +1,359 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    .navDesktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        // box-sizing: border-box;
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 500;
+            // flex: 1;
+            width: 25%;
+
+            span {
+                font-weight: 700;
+            }
+        }
+
+        .navMenu {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            // flex: 1;
+            width: 25%;
+
+            .navMenuItem {
+                padding: 0.5rem 1rem;
+                border-radius: 1000px;
+                transition: all 0.2s ease-in-out;
+                position: relative;
+                transition: all 0.2s ease-in-out;
+                cursor: pointer;
+
+                .dropdownbtn {
+                    color: black;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    transition: all 0.2s ease-in-out;
+                }
+
+                .dropdown {
+                    display: none;
+                    position: absolute;
+                    top: 2.5rem;
+                    left: 0;
+                    background-color: #fff;
+                    padding: 0.5rem 0;
+
+                    .item {
+                        padding: 0.5rem 0;
+
+                        a {
+                            cursor: pointer;
+                            width: 100%;
+                            padding: 0.5rem 1rem;
+                            color: inherit;
+                            text-decoration: none;
+                            transition: all 0.2s ease-in-out;
+
+                            &:hover {
+                                background-color: yellow;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    .dropdownbtn{
+                        color: green;
+                    }
+                    .dropdown {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            // flex: 1;
+            width: 50%;
+
+            .connectWithUs {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.2rem;
+                color: white;
+                cursor: pointer;
+            }
+
+            .navBtns {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+
+                .eachBtn {
+                    // padding: 1rem;
+                    border-radius: 1000px;
+                    height: 3rem;
+                    width: 3em;
+                    background-color: rgba(255, 255, 255, 0.1);
+                    transition: all 0.2s ease-in-out;
+
+                    &:hover{
+                        background-color: green;
+                    }
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 1000px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                        text-decoration: none;
+                        font-size: 1rem;
+                        position: relative;
+                        cursor: pointer;
+
+                        .supertext {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            font-size: 0.85rem;
+                            color: black;
+                            background-color: yellow;
+                            width: 1.25rem;
+                            height: 1.25rem;
+                            border-radius: 50%;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .navMobile {
+        display: none;
+        // display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 500;
+            flex: 1;
+            // width: 25%;
+
+            span {
+                font-weight: 700;
+            }
+        }
+
+        .hamburger {
+            flex: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 2rem;
+                height: 2rem;
+                cursor: pointer;
+            }
+        }
+
+        .navMenu {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            width: 100%;
+            background-color: #fff;
+            z-index: 100;
+            padding: 1rem;
+            box-sizing: border-box;
+
+            .closebtn {
+                padding: 0;
+                cursor: pointer;
+                svg {
+                    font-size: 2rem;
+                }
+            }
+
+            .navMenuItem {
+                padding: 0.5rem 1rem;
+                width: fit-content;
+                border-radius: 1000px;
+                transition: all 0.2s ease-in-out;
+                position: relative;
+                transition: all 0.2s ease-in-out;
+
+                .dropdownbtn {
+                    color: black;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                }
+
+                .dropdown {
+                    // display: none;
+                    // position: absolute;
+                    // top: 2.5rem;
+                    // left: 0;
+                    margin-top: 0.5rem;
+                    background-color: green;
+                    color: #fff;
+                    border-radius: 0.5rem;
+                    // padding: 0.5rem 0;
+
+                    .item {
+                        padding: 0.5rem 0;
+                        width: 100%;
+
+                        a {
+                            cursor: pointer;
+                            width: 100%;
+                            padding: 0.5rem 1rem;
+                            color: inherit;
+                            text-decoration: none;
+                            transition: all 0.2s ease-in-out;
+
+                            &:hover {
+                                background-color: yellow;
+                            }
+                        }
+                    }
+                }
+
+                &:focus {
+                    .dropdown {
+                        display: block;
+                    }
+                }
+            }
+            .connectWithUs {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                gap: 0.2rem;
+            }
+        }
+
+        .right {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            width: 50%;
+
+            .navBtns {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+
+                .eachBtn {
+                    // padding: 1rem;
+                    // border: 1px solid white;
+                    border-radius: 1000px;
+                    height: 2rem;
+                    width: 2rem;
+                    background-color: rgba(255, 255, 255, 0.1);
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 1000px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                        text-decoration: none;
+                        font-size: 1rem;
+                        position: relative;
+                        cursor: pointer;
+
+                        .supertext {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            font-size: 0.65rem;
+                            color: black;
+                            background-color: yellow;
+                            width: 1rem;
+                            height: 1rem;
+                            border-radius: 50%;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width:1000px) {
+        .navDesktop {
+            display: none;
+        }
+
+        .navMobile {
+            display: flex;
+        }
+    }
+
+    @media (max-width:500px) {
+        .navMobile {
+            justify-content: space-between;
+
+            .logo {
+                flex: none;
+                width: fit-content;
+                font-size: 1.5rem;
+            }
+
+            .hamburger {
+                flex: none;
+                width: fit-content;
+            }
+
+            .right {
+                flex: none;
+                width: fit-content;
+            }
+        }
+    }
+}

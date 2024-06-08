@@ -1,0 +1,228 @@
+$lightbrown: #f2f1ec;
+$green: #345333;
+
+.banner {
+    min-height: 100vh;
+    background-image: linear-gradient(90deg, $lightbrown 60%, $green 40%);
+    padding: 4rem 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1320px;
+
+        .content {
+            flex: 1;
+            // width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding-right: 4rem;
+            box-sizing: border-box;
+
+            .supertext {
+                font-size: 1.25rem;
+                font-weight: 600;
+                color: #313131;
+            }
+
+            .text {
+                font-size: 3rem;
+                font-weight: 700;
+                color: #313131;
+                font-family: "Marcellus";
+
+                img {
+                    height: 2rem;
+                }
+            }
+
+            .description {
+                font-size: 1rem;
+                font-weight: 600;
+                color: #ddd8d2;
+            }
+
+            .bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 2rem;
+
+                button {
+                    border: 2px solid transparent;
+                    border-radius: 2rem;
+                    background-color: $green;
+                    color: white;
+                    padding: 0.5rem 1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.2rem;
+                    transition: all 0.2s ease-in-out;
+                    cursor: pointer;
+
+                    svg {
+                        font-size: 1rem;
+                    }
+
+                    &:hover {
+                        border: 2px solid $green;
+                        background-color: transparent;
+                        color: black;
+                    }
+                }
+
+                .number {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+
+                    span {
+                        font-family: "Marcellus", serif;
+                        font-size: 2rem;
+                        font-weight: 600;
+                    }
+
+                    svg {
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                    }
+                }
+
+                .belownumber {
+                    font-weight: 600;
+                    color: #989898;
+                }
+            }
+        }
+
+        .plate {
+            flex: 1;
+            // width: 50%;
+
+            img {
+                width: 30rem;
+            }
+        }
+
+        @media (max-width:1400px) {
+            max-width: 1100px;
+
+            .plate {
+                img {
+                    width: 27rem;
+                }
+            }
+        }
+
+        @media (max-width:1200px) {
+            max-width: 900px;
+
+            .plate {
+                img {
+                    width: 24rem;
+                }
+            }
+        }
+
+        @media (max-width:1000px) {
+            max-width: 700px;
+
+            .content {
+                .text {
+                    font-size: 2.2rem;
+
+                    img {
+                        height: 1.5rem;
+                    }
+                }
+
+                .bottom {
+                    .number {
+                        span {
+                            font-size: 1.5rem;
+                        }
+
+                        svg {
+                            font-size: 1.25rem;
+                        }
+                    }
+
+                    .belownumber {
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+
+            .plate {
+                img {
+                    width: 20rem;
+                }
+            }
+        }
+
+        @media (max-width:800px) {
+            max-width: 550px;
+            flex-direction: column;
+            padding: 3rem 0;
+            gap: 2rem;
+
+            .plate {
+                img {
+                    width: 15rem;
+                }
+            }
+        }
+
+        @media (max-width:600px) {
+            max-width: fit-content;
+            padding: 3rem 0;
+
+            .content {
+                .text {
+                    font-size: 1.8rem;
+
+                    img {
+                        height: 1.4rem;
+                    }
+                }
+
+                .description {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+
+        @media (max-width:500px) {
+            padding: 3rem 0;
+            gap: 2rem;
+
+            .content {
+                padding-right: 2.5rem;
+
+                .bottom {
+                    .shopNow {
+                        font-size: 0.6rem;
+                    }
+                }
+            }
+
+            .plate {
+                img {
+                    width: 15rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width:800px) {
+        background-image: linear-gradient(90deg, $lightbrown 50%, $green 50%);
+    }
+
+}
